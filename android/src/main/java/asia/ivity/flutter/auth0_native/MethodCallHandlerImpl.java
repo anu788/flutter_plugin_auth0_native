@@ -228,6 +228,7 @@ public class MethodCallHandlerImpl implements MethodCallHandler {
 
     apiClient
         .passwordlessWithSMS(phone, type, connection)
+        .addParameter("client", "android")
         .start(
             new BaseCallback<Void, AuthenticationException>() {
               @Override
